@@ -116,12 +116,18 @@ footer{color:#eef5fc}
 .case-details.with-photo li:last-child{margin-bottom:0}
 @media(max-width:600px){.case-details.with-photo{grid-template-columns:1fr;gap:20px}.case-details.with-photo .case-photo{max-width:220px}.case-details.with-photo ul{font-size:1rem}}
 
-.local-tools{background:#edf3f8;border-bottom:1px solid #d8e0e7;color:#233c53;padding:12px 0;font-size:.85rem}
-.local-tools .wrap{display:flex;gap:9px;flex-wrap:wrap;align-items:center}
-.local-tools button{font:inherit;background:white;border:1px solid #aebfce;border-radius:4px;padding:6px 11px;cursor:pointer}
-.local-tools strong{margin-right:5px}.local-tools p{width:100%;margin:0;color:#526477;font-size:.8rem}
-#editor-modal[hidden]{display:none}#editor-modal{position:fixed;inset:0;z-index:30;background:#09182799}
-#editor-modal .editor{width:min(650px,100vw);z-index:31}#editor-modal .editor label{font-weight:600}
-#editor-modal .editor legend{padding-top:12px}#editor-modal .edit-group>button,#editor-modal fieldset>button{background:white;border:1px solid #aebdc9;padding:6px 12px;cursor:pointer;font:inherit}
-#editor-error{color:#a12b23}#local-status{width:100%;font-size:.82rem}
-@media print{.local-tools,.edit-toggle,#editor-modal{display:none!important}header,.research-card,footer{-webkit-print-color-adjust:exact;print-color-adjust:exact}main section{padding:30px 0}.case{break-inside:avoid}}
+.teaching-card{display:grid;grid-template-columns:minmax(0,320px) minmax(0,1fr);gap:38px;align-items:start;background:white;border:1px solid var(--line);padding:clamp(22px,3vw,34px)}
+.teaching-recap,.teaching-event{margin:0}.poster-button{display:block;width:100%;padding:0;border:1px solid var(--line);background:white;cursor:zoom-in}.poster-button:focus-visible{outline:3px solid var(--gold);outline-offset:4px}.poster-button img{display:block;width:100%;height:auto;object-fit:contain}.teaching-card figcaption{font-size:.78rem;line-height:1.45;color:var(--muted);margin-top:8px}.teaching-content time{font-size:.85rem;color:var(--muted)}.teaching-content h3{font-size:clamp(1.3rem,2.2vw,1.8rem);margin:12px 0}.teaching-content p{color:var(--muted);margin:0 0 16px}.teaching-content .organisation{color:var(--blue);font-weight:700}.teaching-content ul{padding-left:20px;color:var(--muted);margin:18px 0 25px}.teaching-content li{margin:8px 0}.teaching-event{max-width:170px}
+.poster-dialog{border:0;padding:16px;border-radius:6px;width:min(1000px,96vw);max-height:94vh;overflow:auto;background:white}.poster-dialog::backdrop{background:#091827d9}.poster-dialog img{display:block;max-width:100%;height:auto;margin:auto}.poster-dialog button{display:block;margin:0 0 12px auto;padding:8px 16px;font:inherit;background:white;border:1px solid var(--line);cursor:pointer}.poster-dialog button:focus-visible{outline:3px solid var(--gold)}
+@media(max-width:760px){.teaching-card{grid-template-columns:1fr;gap:24px}.teaching-recap{max-width:320px;margin:auto}.teaching-event{max-width:150px}}
+
+.project-photo{margin:2px 0 22px}.project-photo img{display:block;width:100%;height:auto;object-fit:contain}.project-photo figcaption{font-size:.8rem;color:var(--muted);line-height:1.45;margin-top:8px}
+
+.project-period{font-size:.92rem}.burkina-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin:2px 0 24px}.burkina-gallery .project-photo{min-width:0;margin:0}.burkina-gallery .project-photo:first-child{grid-column:1/-1}.burkina-gallery .project-photo img{width:100%;height:auto;object-fit:contain}.burkina-gallery figcaption{font-size:.76rem}
+
+/* Four project cards: two columns on desktop, one column on mobile. */
+#work .cases{grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}
+#work .case>.scope{margin-top:auto;padding-top:18px}
+.mongolia-subproject{padding:20px 0 24px;border-top:1px solid var(--line)}.mongolia-subproject h4{font-size:1.12rem;line-height:1.35;margin:8px 0 14px;color:var(--ink)}.subproject-meta{font-size:.8rem;line-height:1.5;font-weight:700;color:var(--blue)}.mongolia-subproject .project-photo{max-width:320px}.mongolia-subproject:last-of-type{padding-bottom:24px}
+.burkina-gallery{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.burkina-gallery .project-photo:first-child{grid-column:auto}.burkina-gallery .project-photo img{aspect-ratio:4/3;background:#f3f5f7;object-fit:contain}.burkina-gallery figcaption{font-size:.72rem;line-height:1.4}
+@media(max-width:760px){#work .cases{grid-template-columns:1fr}.mongolia-subproject .project-photo{max-width:100%}}
