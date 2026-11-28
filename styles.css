@@ -131,3 +131,38 @@ footer{color:#eef5fc}
 .mongolia-subproject{padding:20px 0 24px;border-top:1px solid var(--line)}.mongolia-subproject h4{font-size:1.12rem;line-height:1.35;margin:8px 0 14px;color:var(--ink)}.subproject-meta{font-size:.8rem;line-height:1.5;font-weight:700;color:var(--blue)}.mongolia-subproject .project-photo{max-width:320px}.mongolia-subproject:last-of-type{padding-bottom:24px}
 .burkina-gallery{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.burkina-gallery .project-photo:first-child{grid-column:auto}.burkina-gallery .project-photo img{aspect-ratio:4/3;background:#f3f5f7;object-fit:contain}.burkina-gallery figcaption{font-size:.72rem;line-height:1.4}
 @media(max-width:760px){#work .cases{grid-template-columns:1fr}.mongolia-subproject .project-photo{max-width:100%}}
+
+/* Persistent section navigation: side rail on desktop, compact bar on smaller screens. */
+body{padding-top:68px}
+.site-nav{position:fixed;inset:0 0 auto;z-index:10;display:flex;flex-direction:row;align-items:center;gap:22px;padding:12px 24px;height:68px;border:0;border-bottom:1px solid var(--line);background:#fff;color:var(--ink);box-shadow:0 2px 12px #172b3d0a}
+.site-nav .brand{flex:none;font-size:.95rem;color:var(--navy);white-space:nowrap}
+.site-nav .navlinks{display:flex;flex:1;flex-direction:row;flex-wrap:nowrap;gap:6px;overflow-x:auto;min-width:0;align-items:center;padding:4px;scrollbar-width:thin}
+.site-nav .navlinks a{flex:none;display:block;padding:8px 12px;border-radius:6px;color:var(--muted);font-size:.85rem;white-space:nowrap;text-decoration:none;line-height:1.4}
+.site-nav .navlinks a:hover{color:var(--navy);background:#f1f5f9;text-decoration:none}
+.site-nav .navlinks a[aria-current="location"]{color:var(--navy);background:#e9f1f8;font-weight:700}
+.site-nav a:focus-visible{outline:2px solid var(--gold);outline-offset:1px}
+#top,main section{scroll-margin-top:84px}
+@media(min-width:1200px){
+ body{padding-top:0;padding-left:208px}
+ .site-nav{inset:0 auto 0 0;width:208px;height:auto;flex-direction:column;align-items:stretch;justify-content:flex-start;gap:38px;padding:42px 20px;border-bottom:0;border-right:1px solid var(--line);overflow-y:auto;box-shadow:none}
+ .site-nav .brand{font-size:1.05rem;padding:0 10px}
+ .site-nav .navlinks{flex:none;flex-direction:column;align-items:stretch;overflow-x:visible;padding:3px;gap:8px}
+ .site-nav .navlinks a{font-size:.9rem;padding:12px 10px}
+ #top,main section{scroll-margin-top:24px}
+}
+@media(max-width:760px){
+ body{padding-top:60px}
+ .site-nav{height:60px;gap:12px;padding:8px 12px}
+ .site-nav .brand{font-size:.78rem;max-width:83px;white-space:normal;line-height:1.25}
+ .site-nav .navlinks a{font-size:.8rem;padding:8px 10px}
+ #top,main section{scroll-margin-top:76px}
+}
+
+/* Compact webinar posters, displayed side by side. */
+.teaching-card{grid-template-columns:minmax(0,360px) minmax(0,1fr);gap:30px}
+.teaching-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;align-items:start;width:100%;max-width:360px}
+.teaching-gallery .teaching-recap,.teaching-gallery .teaching-event{width:100%;max-width:none;margin:0;min-width:0}
+.teaching-gallery .poster-button img{height:220px;object-fit:contain;background:white}
+.teaching-gallery figcaption{font-size:.74rem;line-height:1.4}
+@media(max-width:1000px){.teaching-card{grid-template-columns:1fr}.teaching-gallery{max-width:360px}}
+@media(max-width:420px){.teaching-gallery{gap:10px}.teaching-gallery .poster-button img{height:180px}}
